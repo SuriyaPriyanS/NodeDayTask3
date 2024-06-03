@@ -26,17 +26,17 @@ export const getMentorDetails = async (req, res) => {
 };
 
 
-export const getMentorById = async (req, res) => {
-    try {
-        const mentorId = req.params.id;
-        // Assuming Student.findById() returns student details from the database
-        const mentor = await Mentor.findById(mentorId).populate('mentor');
-        if (!mentor) {
-            return res.status(404).send("Student not found");
-        }
-        res.status(200).json({ message: "Student Fetched Data Successfully", data: mentor });
-    } catch (error) {
-        console.log(error);
-        res.status(500).json({ message: "Internal Server Error in getById method" });
-    }
-};
+// export const getMentorById = async (req, res) => {
+//     try {
+//         const mentorId = req.params.id;
+//         // Assuming Student.findById() returns student details from the database
+//         const mentor = await Mentor.findById(mentorId).populate('mentor');
+//         if (!mentor) {
+//             return res.status(404).send("Student not found");
+//         }
+//         res.status(200).json({ message: "Student Fetched Data Successfully", data: mentor });
+//     } catch (error) {
+//         console.log(error);
+//         res.status(500).json({ message: "Internal Server Error in getById method" });
+//     }
+// };
