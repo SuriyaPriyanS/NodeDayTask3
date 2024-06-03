@@ -16,7 +16,7 @@ const connectDB =  async(req,res)=>{
         return connection;
     } catch (error) {
         console.log(error);
-        res.status(500).json({message:"mongoose to coonection error"})
+       // res.status(500).json({message:"mongoose to coonection error"})
     }
 
 }
